@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('show');
         });
 
-        // Close mobile menu when clicking any nav link
         document.querySelectorAll('.nav-link').forEach((link) => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('show');
@@ -21,39 +20,78 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Navbar scroll effect & Active Link Spy
+    // 3. Hardware-Accelerated 60FPS Cursor Follower (requestAnimationFrame)
+    const cursorGlow = document.getElementById('cursor-glow');
+    if (cursorGlow) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let currentX = mouseX;
+        let currentY = mouseY;
+        let isMoving = false;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            if (!isMoving) {
+                cursorGlow.style.opacity = '1';
+                isMoving = true;
+            }
+        }, { passive: true });
+
+        document.addEventListener('mouseleave', () => {
+            cursorGlow.style.opacity = '0';
+            isMoving = false;
+        });
+
+        // Smooth physics-based interpolation on GPU composite layer
+        function animateCursor() {
+            currentX += (mouseX - currentX) * 0.15;
+            currentY += (mouseY - currentY) * 0.15;
+            cursorGlow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+            requestAnimationFrame(animateCursor);
+        }
+        requestAnimationFrame(animateCursor);
+    }
+
+    // 4. Throttled Navbar & Scrollspy (Zero layout thrashing)
     const navbar = document.getElementById('navbar');
     const sections = document.querySelectorAll('header[id], section[id]');
     const allNavLinks = document.querySelectorAll('.nav-link');
 
+    let isScrolling = false;
     window.addEventListener('scroll', () => {
-        // Elevate navbar when scrolled
-        if (window.scrollY > 50) {
-            navbar.style.borderBottomColor = 'rgba(56, 189, 248, 0.2)';
-            navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
-        } else {
-            navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
-            navbar.style.boxShadow = 'none';
+        if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+                const scrollY = window.scrollY;
+
+                // Navbar elevation class
+                if (scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+
+                // Active section spy
+                const scrollPosition = scrollY + 180;
+                let currentId = '';
+
+                sections.forEach((section) => {
+                    const top = section.offsetTop;
+                    const height = section.offsetHeight;
+                    if (scrollPosition >= top && scrollPosition < top + height) {
+                        currentId = section.getAttribute('id');
+                    }
+                });
+
+                if (currentId) {
+                    allNavLinks.forEach((link) => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+                    });
+                }
+
+                isScrolling = false;
+            });
+            isScrolling = true;
         }
-
-        // Highlight current section in navbar
-        let currentSectionId = '';
-        const scrollPosition = window.scrollY + 200;
-
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                currentSectionId = section.getAttribute('id');
-            }
-        });
-
-        allNavLinks.forEach((link) => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSectionId}`) {
-                link.classList.add('active');
-            }
-        });
-    });
+    }, { passive: true });
 });
