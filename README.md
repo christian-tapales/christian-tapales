@@ -5,7 +5,7 @@
 
 # 👋 Hi, I'm Christian Kyle Tapales
 
-### BSIT 4th Year Student • Aspiring Software Engineer • Builder & Lifelong Learner
+### BSIT 4th Year Student • Full Stack and Mobile Developer • Builder & Lifelong Learner
 
 🇵🇭 Philippines
 
