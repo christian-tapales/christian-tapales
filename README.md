@@ -1,90 +1,187 @@
 
 <div align="center">
 
-  <!-- Animated Greeting Header -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,20&height=220&section=header&text=Hi%20there,%20I'm%20Christian%20Tapales%20👋&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=38" alt="Header" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,20&height=220&section=header&text=Christian%20Kyle%20Tapales&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38" width="100%" />
 
-  <!-- Animated Typing Subtitle -->
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=500&lines=Software+Developer;Full-Stack+Enthusiast;Problem+Solver+%26+Tech+Builder;Passionate+about+Modern+Web" alt="Typing SVG" />
-  </a>
+# 👋 Hi, I'm Christian Kyle Tapales
 
-  <p align="center">
-    <a href="https://github.com/christian-tapales">
-      <img src="https://komarev.com/ghpvc/?username=christian-tapales&label=Profile%20Views&color=0e7490&style=flat" alt="Profile Views" />
-    </a>
-  </p>
+### BSIT 4th Year Student • Aspiring Software Engineer • Builder & Lifelong Learner
+
+🇵🇭 Philippines
+
+*"Learning by building, improving through consistency."*
 
 </div>
 
 ---
 
-### 🚀 About Me
+## 👨‍💻 About Me
 
-- 🔭 **I’m currently working on**: Building responsive web applications and interactive projects.
-- 🌱 **I’m currently learning**: Modern full-stack architectures, TypeScript, and UI/UX design.
-- 💡 **Interests**: Clean code, user experience, problem solving, and open-source software.
-- 💬 **Ask me about**: JavaScript, Frontend, Web development, or project collaboration!
-- 📫 **How to reach me**: [LinkedIn](https://linkedin.com) • [Email](mailto:your-email@example.com)
+I'm a 4th-year Bachelor of Science in Information Technology student at CIT-University who enjoys transforming ideas into software.
 
----
+My approach to learning is simple: understand the fundamentals, build real projects, make mistakes, improve, and repeat.
 
-### 🛠️ Tech Stack & Tools
+I am currently focused on strengthening my skills in software engineering, full-stack development, system design, and writing maintainable code that solves real-world problems.
 
-<p align="center">
-  <!-- Languages -->
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-</p>
+Outside of programming, I enjoy:
 
-<p align="center">
-  <!-- Frameworks & Libraries -->
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
-</p>
+🥋 Martial Arts  
+💪 Calisthenics  
+🎮 Gaming
 
-<p align="center">
-  <!-- Tools & Platforms -->
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" />
-  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
-</p>
+These hobbies have taught me the importance of discipline, consistency, adaptability, and continuous improvement—qualities I try to bring into every project I build.
 
 ---
 
-### 📊 GitHub Statistics
+## 🚀 Current Focus
+
+- 🌐 Full-Stack Web Development
+- ☕ Java & Object-Oriented Programming
+- ⚛️ React Development
+- 🍃 Spring Boot Applications
+- 🎨 UI/UX Design
+- 🏗️ Software Architecture & Design Patterns
+- 📚 Continuous Learning & Project Building
+
+---
+
+## 🔥 Featured Projects
+
+### 🎮 Beyond Journey's End
+
+A Java-based text RPG built to strengthen my understanding of object-oriented programming, software design, and game architecture.
+
+**Current Features**
+- Multiple playable classes
+- Turn-based combat system
+- Character abilities and progression
+- Modular game structure
+
+**Learning Goals**
+- Design Patterns
+- Clean Architecture
+- Save/Load Systems
+- Scalable Project Structure
+
+---
+
+### 🍽️ CanteenCoders
+
+A full-stack ordering system built using React and Spring Boot.
+
+**Features**
+- User Authentication
+- JWT Security
+- Shopping Cart System
+- Order Management
+- Responsive Interface
+
+**Focus Areas**
+- Full-Stack Development
+- API Design
+- Database Integration
+- Secure Authentication
+
+---
+
+## 📚 Learning Journey
+
+I believe software engineering is a marathon, not a sprint.
+
+### Completed Foundations
+
+- ✅ C Programming Fundamentals
+- ✅ Java Fundamentals
+- ✅ Object-Oriented Programming
+- ✅ HTML & CSS
+- ✅ JavaScript Fundamentals
+- ✅ Git & GitHub
+
+### Currently Improving
+
+- 🔄 React Ecosystem
+- 🔄 Spring Boot Development
+- 🔄 TypeScript
+- 🔄 UI/UX Design
+- 🔄 Clean Code Practices
+
+### Future Goals
+
+- 🎯 System Design
+- 🎯 Cloud Technologies
+- 🎯 Software Architecture
+- 🎯 Automated Testing
+- 🎯 DevOps Fundamentals
+
+---
+
+## 🛠 Tech Stack
+
+### Languages
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+### Frontend
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+### Backend
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+
+### Tools
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+
+---
+
+## 📊 GitHub Statistics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=christian-tapales&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Christian's GitHub stats" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=christian-tapales&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Top Languages" height="165" />
-</div>
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=christian-tapales&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak" />
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=christian-tapales&show_icons=true&theme=tokyonight&hide_border=true" />
+
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=christian-tapales&layout=compact&theme=tokyonight&hide_border=true" />
+
 </div>
 
 ---
 
-### 🌐 Connect with Me
+## 💭 My Development Philosophy
 
-<p align="center">
-  <a href="https://linkedin.com" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="mailto:your-email@example.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  <a href="https://github.com/christian-tapales">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-</p>
+> Learn deeply. Build consistently. Improve continuously.
 
-<p align="center">
-  ⭐ <i>Feel free to explore my repositories and star projects you like!</i>
-</p>
+I don't aim to simply collect technologies or complete tutorials.
+
+My goal is to understand how software works, develop strong engineering fundamentals, and build projects that challenge me to grow as a developer.
+
+Every project is another step toward becoming a better software engineer.
+
+---
+
+## 🌐 Connect With Me
+
+- 💼 LinkedIn: *Add your LinkedIn URL*
+- 📧 Email: *Add your Email Address*
+- 🐙 GitHub: https://github.com/christian-tapales
+
+---
+
+<div align="center">
+
+### Thanks for visiting! 👋
+
+*"The best way to learn is to build."*
+
+</div>
