@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#090a0f"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" stroke="url(#flame-grad)" stroke-width="2"/>
+  <path d="M22 20L12 32L22 44" stroke="#ff5500" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M42 20L52 32L42 44" stroke="#ffaa00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M26 38L38 24" stroke="#ff7700" stroke-width="3.5" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="flame-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff3b00"/>
+      <stop offset="0.5" stop-color="#ff7700"/>
+      <stop offset="1" stop-color="#ffaa00"/>
+    </linearGradient>
+  </defs>
+</svg>

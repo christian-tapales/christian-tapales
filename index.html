@@ -4,11 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Christian Tapales | Software Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Christian Tapales - Software Developer and Full-Stack Enthusiast." />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <!-- TNC Predator Esports Typography -->
+    <title>Christian Kyle Tapales | Full-Stack Software Developer</title>
+    <meta name="description"
+        content="Portfolio of Christian Kyle Tapales - BSIT student at CIT-University specializing in Java, Spring Boot, React, and high-performance software engineering." />
+    
+    <!-- OpenGraph & Social Metadata -->
+    <meta property="og:title" content="Christian Kyle Tapales | Software Developer Portfolio" />
+    <meta property="og:description"
+        content="Full-Stack Developer passionate about Java, Spring Boot, React, and clean architecture. Explore featured projects and capabilities." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://christian-tapales.github.io/" />
+    <meta property="og:image"
+        content="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,20&height=220&section=header&text=Christian%20Kyle%20Tapales&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#090a0f" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <!-- Google Fonts: Orbitron, Rajdhani, JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,6 +52,10 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
+                <button class="terminal-trigger-btn" id="terminal-trigger" title="Launch Interactive Terminal (Ctrl+K)">
+                    <i data-lucide="terminal"></i>
+                    <span class="terminal-btn-text">CLI</span>
+                </button>
                 <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
                 <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
                     <i data-lucide="menu"></i>
@@ -50,35 +68,43 @@
     <header class="hero" id="hero">
         <div class="container hero-content">
             <div class="badge">
-                <span class="badge-dot"></span> Available for opportunities
+                <span class="badge-dot"></span> Available for Opportunities • CIT-U BSIT
             </div>
             <h1 class="hero-title">
-                Hi, I'm <span class="gradient-text">Christian Tapales</span>
+                Hi, I'm <span class="gradient-text">Christian Kyle Tapales</span>
             </h1>
-            <h2 class="hero-subtitle">Software Developer & Full-Stack Enthusiast</h2>
+            <h2 class="hero-subtitle">Software Developer • Java, Spring Boot & React</h2>
             <p class="hero-description">
-                Crafting modern, accessible, and high-performance digital experiences. Passionate about building
-                impactful web applications with clean code.
+                Transforming ideas into resilient software. Specializing in full-stack architecture, object-oriented
+                design, and responsive web systems with clean, maintainable code.
             </p>
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary">
-                    <i data-lucide="layers"></i> View My Work
+                    <i data-lucide="layers"></i> View Projects
                 </a>
-                <a href="#contact" class="btn btn-secondary">
+                <button class="btn btn-secondary" id="resume-btn" title="View or Download Resume">
+                    <i data-lucide="file-text"></i> Resume / CV
+                </button>
+                <a href="#contact" class="btn btn-outline">
                     <i data-lucide="mail"></i> Get in Touch
                 </a>
             </div>
             <div class="social-links">
                 <a href="https://github.com/christian-tapales" target="_blank" rel="noopener noreferrer"
-                    aria-label="GitHub">
+                    aria-label="GitHub Profile" title="GitHub">
                     <i data-lucide="github"></i>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/christian-kyle-tapales-64b47a286/" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn">
                     <i data-lucide="linkedin"></i>
                 </a>
-                <a href="mailto:your-email@example.com" aria-label="Email">
+                <a href="mailto:christiantapales1@gmail.com" aria-label="Send Email" title="christiantapales1@gmail.com">
                     <i data-lucide="mail"></i>
                 </a>
+                <button class="social-icon-btn" id="terminal-hero-btn" title="Open Interactive Terminal"
+                    aria-label="Open Terminal">
+                    <i data-lucide="terminal"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -92,22 +118,28 @@
             </div>
             <div class="about-grid">
                 <div class="about-card glass">
-                    <div class="about-icon"><i data-lucide="code-2"></i></div>
-                    <h3>Modern Web Development</h3>
-                    <p>Passionate about building responsive, fast, and accessible websites using modern frontend and
-                        backend tools.</p>
+                    <div class="about-icon"><i data-lucide="server"></i></div>
+                    <h3>Backend & Architecture</h3>
+                    <p>
+                        Building robust, scalable backend services with Java and Spring Boot. Focused on clean
+                        architecture, REST API design, JWT security, and relational databases.
+                    </p>
                 </div>
                 <div class="about-card glass">
-                    <div class="about-icon"><i data-lucide="sparkles"></i></div>
-                    <h3>UI/UX & Aesthetics</h3>
-                    <p>Dedicated to crafting sleek interfaces with intuitive interactions, subtle animations, and modern
-                        typography.</p>
+                    <div class="about-icon"><i data-lucide="layout"></i></div>
+                    <h3>Modern Frontend & UI</h3>
+                    <p>
+                        Developing responsive, dynamic interfaces with React, modern JavaScript/TypeScript, and modular CSS
+                        engineered for zero layout jank and fluid 60FPS interactions.
+                    </p>
                 </div>
                 <div class="about-card glass">
-                    <div class="about-icon"><i data-lucide="cpu"></i></div>
-                    <h3>Continuous Learner</h3>
-                    <p>Constantly exploring emerging frameworks, API architectures, and software engineering best
-                        practices.</p>
+                    <div class="about-icon"><i data-lucide="shield-check"></i></div>
+                    <h3>Discipline & Consistency</h3>
+                    <p>
+                        Applying the discipline of martial arts and calisthenics to software engineering: mastering core
+                        fundamentals, building projects consistently, and learning by doing.
+                    </p>
                 </div>
             </div>
         </div>
@@ -122,31 +154,44 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-category glass">
-                    <h3><i data-lucide="terminal"></i> Languages</h3>
+                    <h3><i data-lucide="code-2"></i> Languages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag highlight">Java</span>
+                        <span class="skill-tag highlight">JavaScript (ES6+)</span>
                         <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3 / SCSS</span>
+                        <span class="skill-tag">C</span>
                         <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML5 / CSS3</span>
                     </div>
                 </div>
                 <div class="skill-category glass">
-                    <h3><i data-lucide="layout"></i> Frameworks & Libs</h3>
+                    <h3><i data-lucide="server"></i> Frameworks & Backend</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag highlight">Spring Boot</span>
+                        <span class="skill-tag highlight">React.js</span>
+                        <span class="skill-tag">Spring Security (JWT)</span>
                         <span class="skill-tag">Node.js</span>
                         <span class="skill-tag">Express.js</span>
                         <span class="skill-tag">Tailwind CSS</span>
                     </div>
                 </div>
                 <div class="skill-category glass">
-                    <h3><i data-lucide="wrench"></i> Tools & Workflow</h3>
+                    <h3><i data-lucide="database"></i> Databases & Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">MySQL / Relational DB</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">OOP & Clean Code</span>
+                        <span class="skill-tag">Design Patterns</span>
+                        <span class="skill-tag">Game Architecture</span>
+                    </div>
+                </div>
+                <div class="skill-category glass">
+                    <h3><i data-lucide="wrench"></i> Tools & Environment</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Git & GitHub</span>
                         <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">REST APIs</span>
                         <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Maven</span>
                         <span class="skill-tag">Vite</span>
                     </div>
                 </div>
@@ -163,89 +208,127 @@
             </div>
             <div class="projects-grid">
 
-                <!-- Project Card 1 -->
+                <!-- Project Card 1: CanteenCoders -->
                 <div class="project-card glass">
                     <div class="project-preview">
-                        <div class="project-placeholder">
-                            <i data-lucide="laptop"></i>
+                        <div class="project-preview-mockup">
+                            <div class="mockup-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="mockup-tab">canteencoders-api : 8080</span>
+                            </div>
+                            <div class="mockup-code">
+                                <code><span class="code-kw">@RestController</span></code><br />
+                                <code><span class="code-fn">OrderController</span> { JWT Auth, Cart, Orders }</code>
+                            </div>
                         </div>
                     </div>
                     <div class="project-info">
+                        <div class="project-status-badge">Full-Stack Application</div>
                         <div class="project-tags">
                             <span>React</span>
-                            <span>JavaScript</span>
-                            <span>CSS3</span>
-                        </div>
-                        <h3 class="project-title">Interactive Web App</h3>
-                        <p class="project-description">
-                            A responsive web application featuring real-time data filtering, clean UI architecture, and
-                            modern state management.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/christian-tapales" target="_blank" class="btn-link">
-                                <i data-lucide="github"></i> Code
-                            </a>
-                            <a href="#" class="btn-link">
-                                <i data-lucide="external-link"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card glass">
-                    <div class="project-preview">
-                        <div class="project-placeholder">
-                            <i data-lucide="server"></i>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span>Node.js</span>
-                            <span>Express</span>
+                            <span>Spring Boot</span>
+                            <span>JWT</span>
+                            <span>MySQL</span>
                             <span>REST API</span>
                         </div>
-                        <h3 class="project-title">RESTful API Backend</h3>
+                        <h3 class="project-title">CanteenCoders</h3>
                         <p class="project-description">
-                            Secure and scalable backend API service with endpoint routing, authentication flow, and
-                            database integration.
+                            Full-stack campus food ordering platform. Features end-to-end user authentication, JWT
+                            security, dynamic shopping cart management, real-time order tracking, and clean API endpoints.
                         </p>
                         <div class="project-links">
-                            <a href="https://github.com/christian-tapales" target="_blank" class="btn-link">
-                                <i data-lucide="github"></i> Code
+                            <a href="https://github.com/christian-tapales" target="_blank" rel="noopener noreferrer"
+                                class="btn-link">
+                                <i data-lucide="github"></i> Source Code
                             </a>
-                            <a href="#" class="btn-link">
-                                <i data-lucide="external-link"></i> Documentation
-                            </a>
+                            <button class="btn-link project-details-btn" data-project="canteencoders">
+                                <i data-lucide="info"></i> Architecture
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 3 -->
+                <!-- Project Card 2: Beyond Journey's End -->
                 <div class="project-card glass">
                     <div class="project-preview">
-                        <div class="project-placeholder">
-                            <i data-lucide="globe"></i>
+                        <div class="project-preview-mockup">
+                            <div class="mockup-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="mockup-tab">beyond-journeys-end.java</span>
+                            </div>
+                            <div class="mockup-code">
+                                <code><span class="code-kw">public class</span> <span class="code-fn">BattleEngine</span> {</code><br />
+                                <code>&nbsp;&nbsp;turnBasedCombat.execute();</code>
+                            </div>
                         </div>
                     </div>
                     <div class="project-info">
+                        <div class="project-status-badge">Software Architecture • Java</div>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>OOP</span>
+                            <span>Design Patterns</span>
+                            <span>Clean Architecture</span>
+                        </div>
+                        <h3 class="project-title">Beyond Journey's End</h3>
+                        <p class="project-description">
+                            Java-based text RPG developed to apply strict Object-Oriented Programming and design patterns.
+                            Implements turn-based combat, modular hero classes, abilities, inventory logic, and game state
+                            persistence.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/christian-tapales" target="_blank" rel="noopener noreferrer"
+                                class="btn-link">
+                                <i data-lucide="github"></i> Source Code
+                            </a>
+                            <button class="btn-link project-details-btn" data-project="beyond">
+                                <i data-lucide="info"></i> Systems Design
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Flame Cyber Portfolio Hub -->
+                <div class="project-card glass">
+                    <div class="project-preview">
+                        <div class="project-preview-mockup">
+                            <div class="mockup-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="mockup-tab">portfolio-hub : 60fps</span>
+                            </div>
+                            <div class="mockup-code">
+                                <code><span class="code-kw">const</span> <span class="code-fn">fpsEngine</span> = 60;</code><br />
+                                <code>requestAnimationFrame(animateSpotlight);</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-status-badge">High Performance • Web Hub</div>
                         <div class="project-tags">
                             <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
+                            <span>CSS3 Grid</span>
+                            <span>JavaScript (ES6+)</span>
+                            <span>GPU Acceleration</span>
                         </div>
-                        <h3 class="project-title">Developer Portfolio</h3>
+                        <h3 class="project-title">Flame Cyber Portfolio Hub</h3>
                         <p class="project-description">
-                            Personal branding website and GitHub profile hub built with responsive glassmorphism
-                            aesthetic and smooth interactions.
+                            Personal branding and GitHub profile gateway built with high-performance vanilla architecture,
+                            zero layout thrashing, GPU-interpolated spotlight glow, interactive terminal CLI, and responsive
+                            cyberpunk aesthetics.
                         </p>
                         <div class="project-links">
                             <a href="https://github.com/christian-tapales/christian-tapales" target="_blank"
-                                class="btn-link">
-                                <i data-lucide="github"></i> Code
+                                rel="noopener noreferrer" class="btn-link">
+                                <i data-lucide="github"></i> Source Code
                             </a>
-                            <a href="#" class="btn-link">
-                                <i data-lucide="external-link"></i> Live Demo
+                            <a href="#hero" class="btn-link">
+                                <i data-lucide="rotate-ccw"></i> View Top
                             </a>
                         </div>
                     </div>
@@ -263,18 +346,50 @@
                     <span class="section-tag">Get in Touch</span>
                     <h2 class="section-title">Let's Build Something Together</h2>
                     <p class="contact-subtitle">
-                        I'm currently looking for new opportunities, collaborations, and projects. Feel free to reach
-                        out!
+                        Currently looking for internship roles, software engineering opportunities, and collaborations.
+                        Have a question or want to chat? Reach out directly!
                     </p>
                 </div>
-                <div class="contact-buttons">
-                    <a href="mailto:your-email@example.com" class="btn btn-primary">
-                        <i data-lucide="mail"></i> Send an Email
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        <i data-lucide="linkedin"></i> Connect on LinkedIn
+
+                <!-- Quick Direct Info Pill -->
+                <div class="direct-contact-pill">
+                    <div class="email-display">
+                        <i data-lucide="mail"></i>
+                        <span id="contact-email-text">christiantapales1@gmail.com</span>
+                    </div>
+                    <button class="btn btn-sm btn-secondary" id="copy-email-btn" title="Copy email address to clipboard">
+                        <i data-lucide="copy"></i> Copy Email
+                    </button>
+                    <a href="mailto:christiantapales1@gmail.com" class="btn btn-sm btn-primary">
+                        <i data-lucide="send"></i> Open Mail Client
                     </a>
                 </div>
+
+                <!-- Interactive Message Form -->
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="form-name">Your Name</label>
+                            <input type="text" id="form-name" name="name" placeholder="John Doe" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Your Email</label>
+                            <input type="email" id="form-email" name="email" placeholder="john@example.com" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-subject">Subject</label>
+                        <input type="text" id="form-subject" name="subject" placeholder="Project collaboration / Internship opportunity" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="form-message">Message</label>
+                        <textarea id="form-message" name="message" rows="4" placeholder="Hi Christian, I'd like to discuss..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i data-lucide="send"></i> Send Message
+                    </button>
+                </form>
+
             </div>
         </div>
     </section>
@@ -282,12 +397,66 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
-            <p>© 2026 Christian Tapales. Built with passion & clean code.</p>
-            <a href="#hero" class="back-to-top" aria-label="Back to top">
-                <i data-lucide="arrow-up"></i>
-            </a>
+            <p>© 2026 Christian Kyle Tapales • Built with clean code & continuous learning.</p>
+            <div class="footer-actions">
+                <button class="footer-term-btn" id="footer-terminal-btn">
+                    <i data-lucide="terminal"></i> Terminal CLI
+                </button>
+                <a href="#hero" class="back-to-top" aria-label="Back to top" title="Back to top">
+                    <i data-lucide="arrow-up"></i>
+                </a>
+            </div>
         </div>
     </footer>
+
+    <!-- Interactive Cyber Terminal CLI Modal -->
+    <div class="terminal-modal" id="terminal-modal" aria-hidden="true" role="dialog" aria-label="Interactive Terminal">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span class="dot red" id="terminal-close-btn" title="Close Terminal"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="terminal-title">
+                    <i data-lucide="terminal"></i> christian@tapales-portfolio:~ (bash)
+                </div>
+                <button class="terminal-close-icon" id="terminal-close-icon" aria-label="Close terminal">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-welcome">
+                    <p class="term-dim">Tapales-OS v2.4 (Flame Cyber Shell)</p>
+                    <p class="term-dim">Type <span class="term-accent">'help'</span> for available commands, or <span class="term-accent">'exit'</span> to close.</p>
+                    <p class="term-dim">---------------------------------------------------------</p>
+                </div>
+                <div id="terminal-output"></div>
+                <div class="terminal-prompt-line">
+                    <span class="term-user">visitor@tapales</span><span class="term-colon">:</span><span class="term-path">~</span><span class="term-dollar">$</span>
+                    <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false" autofocus />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume / Architecture Details Modal -->
+    <div class="info-modal" id="info-modal" aria-hidden="true" role="dialog">
+        <div class="info-modal-content glass">
+            <div class="info-modal-header">
+                <h3 id="info-modal-title">Project Details</h3>
+                <button class="info-modal-close" id="info-modal-close" aria-label="Close modal">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="info-modal-body" id="info-modal-body">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Toast Notification -->
+    <div class="toast-container" id="toast-container"></div>
 
     <script src="script.js"></script>
 </body>
