@@ -598,42 +598,81 @@ body {
     flex-direction: column;
 }
 
-.project-preview {
-    height: 180px;
-    background: linear-gradient(135deg, rgba(255, 85, 0, 0.15) 0%, rgba(15, 18, 26, 0.98) 100%);
+/* ==========================================================================
+   Architectural Dataflow Preview (High-Signal Technical Diagrams)
+   ========================================================================== */
+.project-arch-flow {
+    background: #0b0d13;
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: var(--font-mono);
+    transition: var(--transition-fast);
+}
+
+.project-card:hover .project-arch-flow {
+    background: #0f121a;
+}
+
+.flow-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.flow-status-tag {
+    color: var(--flame-bright);
+    font-weight: 500;
+}
+
+.flow-node {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-sm);
+    padding: 7px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition-fast);
+}
+
+.project-card:hover .flow-node {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.flow-layer {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.flow-tech {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+}
+
+.flow-divider {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid var(--border-color);
-    padding: 16px;
-    overflow: hidden;
-}
-
-.project-preview-mockup {
-    width: 100%;
-    height: 100%;
-    background: rgba(9, 10, 15, 0.85);
-    border: 1px solid rgba(255, 85, 0, 0.25);
-    border-radius: var(--radius-sm);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transition: var(--transition-smooth);
-}
-
-.project-card:hover .project-preview-mockup {
-    border-color: var(--flame-bright);
-    box-shadow: 0 0 20px var(--glow-flame);
-    transform: scale(1.02);
-}
-
-.mockup-header {
-    display: flex;
-    align-items: center;
     gap: 6px;
-    padding: 8px 12px;
-    background: rgba(15, 18, 26, 0.95);
-    border-bottom: 1px solid rgba(255, 85, 0, 0.15);
+    font-size: 0.68rem;
+    color: var(--flame-bright);
+    padding: 1px 0;
+}
+
+.flow-divider i {
+    width: 12px;
+    height: 12px;
 }
 
 .dot {

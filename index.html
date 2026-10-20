@@ -215,41 +215,53 @@
 
                 <!-- Project Card 1: CanteenCoders -->
                 <div class="project-card glass">
-                    <div class="project-preview">
-                        <div class="project-preview-mockup">
-                            <div class="mockup-header">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
-                                <span class="mockup-tab">canteencoders-api : 8080</span>
-                            </div>
-                            <div class="mockup-code">
-                                <code><span class="code-kw">@RestController</span></code><br />
-                                <code><span class="code-fn">OrderController</span> { JWT Auth, Cart, Orders }</code>
-                            </div>
+                    <div class="project-arch-flow" aria-label="CanteenCoders Architecture Flow">
+                        <div class="flow-header">
+                            <span>System Architecture</span>
+                            <span class="flow-status-tag">Stateless REST Flow</span>
+                        </div>
+                        <div class="flow-node">
+                            <span class="flow-layer">Client Tier</span>
+                            <span class="flow-tech">React SPA • Dynamic Cart</span>
+                        </div>
+                        <div class="flow-divider" aria-hidden="true">
+                            <i data-lucide="arrow-down"></i>
+                            <span>Bearer JWT Authentication</span>
+                        </div>
+                        <div class="flow-node">
+                            <span class="flow-layer">Application Core</span>
+                            <span class="flow-tech">Spring Boot 3 • REST Controllers</span>
+                        </div>
+                        <div class="flow-divider" aria-hidden="true">
+                            <i data-lucide="arrow-down"></i>
+                            <span>Spring Data JPA / ORM</span>
+                        </div>
+                        <div class="flow-node">
+                            <span class="flow-layer">Relational Store</span>
+                            <span class="flow-tech">MySQL 8 • ACID Schema</span>
                         </div>
                     </div>
                     <div class="project-info">
                         <div class="project-status-badge">Full-Stack Application</div>
                         <div class="project-tags">
-                            <span>React</span>
+                            <span>Java</span>
                             <span>Spring Boot</span>
                             <span>JWT</span>
+                            <span>React</span>
                             <span>MySQL</span>
                             <span>REST API</span>
                         </div>
                         <h3 class="project-title">CanteenCoders</h3>
                         <p class="project-description">
-                            Full-stack campus food ordering platform. Features end-to-end user authentication, JWT
-                            security, dynamic shopping cart management, real-time order tracking, and clean API endpoints.
+                            Full-stack campus food pre-ordering platform built to solve peak-hour cafeteria congestion. Engineered with stateless JWT authentication, role-based vendor/student permissions, reactive shopping cart state, and normalized relational schema.
                         </p>
                         <div class="project-links">
                             <a href="https://github.com/christian-tapales" target="_blank" rel="noopener noreferrer"
                                 class="btn-link">
-                                <i data-lucide="github"></i> Source Code
+                                <i data-lucide="github"></i> Repository
                             </a>
                             <button class="btn-link project-details-btn" data-project="canteencoders">
-                                <i data-lucide="info"></i> Architecture
+                                <i data-lucide="info"></i> Architecture Spec
                             </button>
                         </div>
                     </div>
@@ -257,41 +269,51 @@
 
                 <!-- Project Card 2: Beyond Journey's End -->
                 <div class="project-card glass">
-                    <div class="project-preview">
-                        <div class="project-preview-mockup">
-                            <div class="mockup-header">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
-                                <span class="mockup-tab">beyond-journeys-end.java</span>
-                            </div>
-                            <div class="mockup-code">
-                                <code><span class="code-kw">public class</span> <span class="code-fn">BattleEngine</span> {</code><br />
-                                <code>&nbsp;&nbsp;turnBasedCombat.execute();</code>
-                            </div>
+                    <div class="project-arch-flow" aria-label="Beyond Journey's End Architecture Flow">
+                        <div class="flow-header">
+                            <span>Engine Architecture</span>
+                            <span class="flow-status-tag">Decoupled OOP Design</span>
+                        </div>
+                        <div class="flow-node">
+                            <span class="flow-layer">Game Loop Subsystem</span>
+                            <span class="flow-tech">Tick Cycle & Event Delegation</span>
+                        </div>
+                        <div class="flow-divider" aria-hidden="true">
+                            <i data-lucide="arrow-down"></i>
+                            <span>Polymorphic State Resolution</span>
+                        </div>
+                        <div class="flow-node">
+                            <span class="flow-layer">Combat State Machine</span>
+                            <span class="flow-tech">Turn Resolution & Logic</span>
+                        </div>
+                        <div class="flow-divider" aria-hidden="true">
+                            <i data-lucide="arrow-down"></i>
+                            <span>Composition Hierarchy</span>
+                        </div>
+                        <div class="flow-node">
+                            <span class="flow-layer">Entity & Inventory Logic</span>
+                            <span class="flow-tech">Modular Hero Archetypes</span>
                         </div>
                     </div>
                     <div class="project-info">
-                        <div class="project-status-badge">Software Architecture • Java</div>
+                        <div class="project-status-badge">Software Engine • Java SE</div>
                         <div class="project-tags">
-                            <span>Java</span>
-                            <span>OOP</span>
-                            <span>Design Patterns</span>
+                            <span>Java 17+</span>
                             <span>Clean Architecture</span>
+                            <span>OOP Design Patterns</span>
+                            <span>State Machines</span>
                         </div>
                         <h3 class="project-title">Beyond Journey's End</h3>
                         <p class="project-description">
-                            Java-based text RPG developed to apply strict Object-Oriented Programming and design patterns.
-                            Implements turn-based combat, modular hero classes, abilities, inventory logic, and game state
-                            persistence.
+                            Java-based text RPG engine engineered to apply strict Object-Oriented design principles and pattern decoupling. Implements turn-based combat state machines, extensible character class hierarchies, and composable inventory mechanics with zero UI coupling.
                         </p>
                         <div class="project-links">
                             <a href="https://github.com/christian-tapales" target="_blank" rel="noopener noreferrer"
                                 class="btn-link">
-                                <i data-lucide="github"></i> Source Code
+                                <i data-lucide="github"></i> Repository
                             </a>
                             <button class="btn-link project-details-btn" data-project="beyond">
-                                <i data-lucide="info"></i> Systems Design
+                                <i data-lucide="info"></i> Systems Spec
                             </button>
                         </div>
                     </div>
