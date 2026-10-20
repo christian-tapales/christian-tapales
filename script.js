@@ -298,6 +298,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     `
                 );
+            } else if (projectType === 'relational-db') {
+                openInfoModal(
+                    'Relational Schema & Database Modeling — Systems Spec',
+                    `
+                    <div style="font-size: 0.95rem; line-height: 1.6;">
+                        <p style="color: var(--flame-bright); font-weight: 600; margin-bottom: 8px;">
+                            Relational Database Modeling & Normalized Schema Architecture
+                        </p>
+                        <p style="margin-bottom: 14px;">
+                            Engineered as part of advanced computer science coursework to demonstrate database normalization, relational integrity, and high-performance transactional design.
+                        </p>
+                        <ul style="list-style-type: none; padding-left: 0; display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;">
+                            <li>📐 <strong>3NF Normalization:</strong> Designed strictly to Third Normal Form to eliminate update anomalies and data redundancy.</li>
+                            <li>🔒 <strong>Relational Constraints:</strong> Foreign key cascading rules, check constraints, and unique compound indexes.</li>
+                            <li>⚡ <strong>Performance Indexing:</strong> B-tree indexing on high-frequency search columns (student IDs, orders, timestamps).</li>
+                            <li>🔄 <strong>ACID Transactions:</strong> Isolation level testing for concurrent booking and order reconciliation.</li>
+                        </ul>
+                        <a href="https://github.com/christian-tapales" target="_blank" class="btn btn-primary btn-sm">
+                            <i data-lucide="github"></i> View Repositories
+                        </a>
+                    </div>
+                    `
+                );
             }
         });
     });
