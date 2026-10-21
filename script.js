@@ -68,6 +68,23 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentX = mouseX;
         let currentY = mouseY;
         let isMoving = false;
+        let rafId = null;
+
+        function animateCursor() {
+            const dx = mouseX - currentX;
+            const dy = mouseY - currentY;
+
+            currentX += dx * 0.15;
+            currentY += dy * 0.15;
+            cursorGlow.style.transform = `translate3d(${currentX.toFixed(1)}px, ${currentY.toFixed(1)}px, 0) translate(-50%, -50%)`;
+
+            // Only continue the animation frame if the coordinates have not converged
+            if (Math.abs(dx) > 0.2 || Math.abs(dy) > 0.2) {
+                rafId = requestAnimationFrame(animateCursor);
+            } else {
+                rafId = null;
+            }
+        }
 
         window.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
@@ -76,20 +93,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 cursorGlow.style.opacity = '1';
                 isMoving = true;
             }
+            if (!rafId) {
+                rafId = requestAnimationFrame(animateCursor);
+            }
         }, { passive: true });
 
         document.addEventListener('mouseleave', () => {
             cursorGlow.style.opacity = '0';
             isMoving = false;
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            }
         });
-
-        function animateCursor() {
-            currentX += (mouseX - currentX) * 0.15;
-            currentY += (mouseY - currentY) * 0.15;
-            cursorGlow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
-            requestAnimationFrame(animateCursor);
-        }
-        requestAnimationFrame(animateCursor);
     }
 
     // =========================================================================
@@ -166,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // =========================================================================
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const name = document.getElementById('form-name').value.trim();
             const email = document.getElementById('form-email').value.trim();
@@ -178,15 +194,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            const formattedBody = `From: ${name} (${email})\n\nMessage:\n${message}`;
+
+            // Attempt clipboard backup so drafted message is not lost if mail client fails to launch
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(
+                        `To: christiantapales1@gmail.com\nSubject: [Portfolio Contact] ${subject}\n\n${formattedBody}`
+                    );
+                }
+            } catch (err) {
+                // Clipboard fallback failure is non-blocking
+            }
+
             // Construct mailto intent
             const mailtoUrl = `mailto:christiantapales1@gmail.com?subject=${encodeURIComponent(
                 `[Portfolio Contact] ${subject} - from ${name}`
-            )}&body=${encodeURIComponent(
-                `From: ${name} (${email})\n\nMessage:\n${message}`
-            )}`;
+            )}&body=${encodeURIComponent(formattedBody)}`;
 
             window.location.href = mailtoUrl;
-            showToast('Opening mail client... Thanks for reaching out!', 'send');
+            showToast('Opening mail client! (Message text copied to clipboard as backup)', 'send');
             contactForm.reset();
         });
     }
