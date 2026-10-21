@@ -28,19 +28,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================================================
-    // 2. Mobile Navigation Menu Toggle
+    // 2. Mobile Navigation Menu Toggle (with ARIA & Click-Outside)
     // =========================================================================
     const mobileToggle = document.getElementById('mobile-toggle');
     const navLinks = document.getElementById('nav-links');
 
     if (mobileToggle && navLinks) {
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.toggle('show');
+            mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('show') && !navLinks.contains(e.target) && e.target !== mobileToggle) {
+                navLinks.classList.remove('show');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            }
         });
 
         document.querySelectorAll('.nav-link').forEach((link) => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('show');
+                mobileToggle.setAttribute('aria-expanded', 'false');
             });
         });
     }
@@ -180,6 +191,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Helper: Accessible Modal Focus Trap
+    function trapFocus(modalElement) {
+        const focusableSelectors = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        const focusableElements = Array.from(modalElement.querySelectorAll(focusableSelectors)).filter(
+            (el) => !el.hasAttribute('disabled') && el.offsetParent !== null
+        );
+        if (focusableElements.length === 0) return () => {};
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        function handleTab(e) {
+            if (e.key !== 'Tab') return;
+
+            if (e.shiftKey) {
+                if (document.activeElement === firstElement) {
+                    lastElement.focus();
+                    e.preventDefault();
+                }
+            } else {
+                if (document.activeElement === lastElement) {
+                    firstElement.focus();
+                    e.preventDefault();
+                }
+            }
+        }
+
+        modalElement.addEventListener('keydown', handleTab);
+        return () => modalElement.removeEventListener('keydown', handleTab);
+    }
+
     // =========================================================================
     // 7. Info Modal: Resume & Architecture Breakdowns
     // =========================================================================
@@ -189,19 +231,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const infoModalClose = document.getElementById('info-modal-close');
     const resumeBtn = document.getElementById('resume-btn');
 
+    let lastActiveInfoTrigger = null;
+    let removeInfoFocusTrap = null;
+
     function openInfoModal(title, htmlContent) {
         if (!infoModal) return;
+        lastActiveInfoTrigger = document.activeElement;
         infoModalTitle.textContent = title;
         infoModalBody.innerHTML = htmlContent;
         infoModal.classList.add('active');
         infoModal.setAttribute('aria-hidden', 'false');
         refreshIcons();
+        if (infoModalClose) infoModalClose.focus();
+        removeInfoFocusTrap = trapFocus(infoModal);
     }
 
     function closeInfoModal() {
         if (!infoModal) return;
         infoModal.classList.remove('active');
         infoModal.setAttribute('aria-hidden', 'true');
+        if (removeInfoFocusTrap) {
+            removeInfoFocusTrap();
+            removeInfoFocusTrap = null;
+        }
+        if (lastActiveInfoTrigger && typeof lastActiveInfoTrigger.focus === 'function') {
+            lastActiveInfoTrigger.focus();
+            lastActiveInfoTrigger = null;
+        }
     }
 
     if (infoModalClose) {
@@ -341,20 +397,33 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('footer-terminal-btn')
     ];
 
+    let lastTerminalTrigger = null;
+    let removeTerminalFocusTrap = null;
+
     function openTerminal() {
         if (!terminalModal) return;
+        lastTerminalTrigger = document.activeElement;
         terminalModal.classList.add('active');
         terminalModal.setAttribute('aria-hidden', 'false');
         if (terminalInput) {
             terminalInput.focus();
         }
         refreshIcons();
+        removeTerminalFocusTrap = trapFocus(terminalModal);
     }
 
     function closeTerminal() {
         if (!terminalModal) return;
         terminalModal.classList.remove('active');
         terminalModal.setAttribute('aria-hidden', 'true');
+        if (removeTerminalFocusTrap) {
+            removeTerminalFocusTrap();
+            removeTerminalFocusTrap = null;
+        }
+        if (lastTerminalTrigger && typeof lastTerminalTrigger.focus === 'function') {
+            lastTerminalTrigger.focus();
+            lastTerminalTrigger = null;
+        }
     }
 
     terminalTriggers.forEach((trigger) => {

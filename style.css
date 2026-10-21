@@ -1006,7 +1006,18 @@ body {
 }
 
 .terminal-dots .dot {
+    cursor: default;
+}
+
+.terminal-dots button.dot {
+    border: none;
+    padding: 0;
     cursor: pointer;
+}
+
+.terminal-dots button.dot:focus-visible {
+    outline: 2px solid var(--flame-bright);
+    outline-offset: 2px;
 }
 
 .terminal-title {
