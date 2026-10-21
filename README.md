@@ -1,7 +1,7 @@
 <div align="center">
 
 # Christian Kyle Tapales
-### Full-Stack Developer • Software Engineering Student
+### Full-Stack Developer • BSIT Student
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-kyle-tapales-64b47a286/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:christiantapales1@gmail.com)
